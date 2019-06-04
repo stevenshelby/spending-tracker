@@ -35,6 +35,12 @@ def parse_email():
         method = "Chase"
         sheet.add_expense(amount, description, category, method)
 
+    elif "A transaction was charged to your account | Une transaction" in subject:
+        description = extract("(?<=\*$\s)(.*)(?=\s\$.*Please)", body)
+        amount = extract("(?<=\$)(.*\.\d\d)$", body)
+        category = assign_cat_card(description)
+        method = "Costco Capital One"
+        sheet.add_expense(amount, description, category, method)
     return jsonify({"success": "true"})
 
 
