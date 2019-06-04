@@ -45,7 +45,7 @@ def parse_email():
 
 
 def extract(regex, body):
-    result = re.search(regex, body, flags = re.S)
+    result = re.search(regex, body, re.S | re.M)
     return "NOT FOUND" if result is None else result.group()
 
 
