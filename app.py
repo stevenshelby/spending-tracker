@@ -36,8 +36,8 @@ def parse_email():
         sheet.add_expense(amount, description, category, method)
 
     elif "A transaction was charged to your account | Une transaction" in subject:
-        description = extract("(?<=\*$\s)(.*)(?=\s\$.*Please)", body)
-        amount = extract("(?<=\$)(.*\.\d\d)$", body)
+        description = extract("(?<=\*\\r\\n)(.*)(?=\\r\\n\\r\\n\$)", body)
+        amount = extract("(?<=\\r\\n\\r\\n\$)(.*)(?=\\r\\nPlease)", body)
         category = assign_cat_card(description)
         method = "Costco Capital One"
         sheet.add_expense(amount, description, category, method)
@@ -45,7 +45,7 @@ def parse_email():
 
 
 def extract(regex, body):
-    result = re.search(regex, body, re.S | re.M)
+    result = re.search(regex, body)
     return "NOT FOUND" if result is None else result.group()
 
 
