@@ -41,6 +41,7 @@ def parse_email():
         category = assign_cat_card(description)
         method = "Costco Capital One"
         sheet.add_expense(amount, description, category, method)
+
     return jsonify({"success": "true"})
 
 

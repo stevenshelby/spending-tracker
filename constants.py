@@ -1,6 +1,6 @@
 STORES = {
     "chipotle": "Eating Out",
-    "trader joes": "Groceries",
+    "quesada" : "Eating Out",
     "starbucks": "Eating Out",
     "spotify": "Disgressionary",
 }
