@@ -28,7 +28,7 @@ STORES = {
     "shell": "Transportation",
     "bell canada": "Entertainment",
     "netflix": "Entertainment",
-    "london bridge child": "Child Care",
+    "london bridge child": "Child Care"
 }
 
 VENMOS = {
