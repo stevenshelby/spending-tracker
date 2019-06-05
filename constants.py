@@ -21,7 +21,7 @@ STORES = {
     "paypal": "Disgressionary",
     "real canadian superstore": "Groceries",
     "shoppers drug mart": "Groceries",
-    "metro": "Groceries"
+    "metro": "Groceries",
     "raw source": "Pets",
     "oakridge animal clinic": "Pets",
     "petro": "Transportation",
